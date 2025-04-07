@@ -35,7 +35,6 @@ class TopicResponse(BaseModel):
     topic: str
     confidence_scores: list[ConfidenceScores]
 
-# Define topics + "Other"
 topics = [
     "Business",
     "Entertainment",
@@ -45,10 +44,10 @@ topics = [
     "Sport",
     "Technology"
 ]
-CONFIDENCE_THRESHOLD = 0.6  # Threshold for "Other" classification
+CONFIDENCE_THRESHOLD = 0.6  
 
 # Load model and tokenizer
-MODEL_PATH = "./model"  # Adjust to your local path
+MODEL_PATH = "./model"  
 try:
     tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
     model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)
@@ -69,19 +68,16 @@ def classify_text(text: str) -> tuple[str, dict[str, float]]:
         temperature = 1.5
         probs = torch.softmax(logits / temperature, dim=-1).squeeze().cpu().numpy()
     
-    # Confidence scores for defined topics
     confidence_scores = {topic: float(prob) for topic, prob in zip(topics, probs)}
     
-    # Check max confidence against threshold
     max_confidence = max(confidence_scores.values())
     if max_confidence < CONFIDENCE_THRESHOLD:
-        predicted_topic = "Other"
-        # Add "Other" to confidence scores with a placeholder value (e.g., max confidence)
-        confidence_scores["Other"] = max_confidence
+        predicted_topic = "Others"
+        confidence_scores["Others"] = max_confidence
     else:
         predicted_idx = np.argmax(probs)
         predicted_topic = topics[predicted_idx]
-        confidence_scores["Other"] = round(0.00, 16)
+        confidence_scores["Others"] = round(0.00, 16)
 
     print(f"Predicted topic: {predicted_topic}, Confidence scores: {confidence_scores}")
     
