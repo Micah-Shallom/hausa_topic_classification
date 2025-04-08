@@ -36,7 +36,7 @@ A topic classification system for Hausa news using AfroXLMR-base, achieving a te
 
 4. **Download Model Weights**:
    - Due to size (~1.04 GB), model files are not included.
-   - Download from: [Google Drive Link](https://drive.google.com/drive/folders/[your-folder-id]?usp=sharing)  
+   - Download from: [Google Drive Link](https://drive.google.com/drive/folders/1fEvLEjKdMiM1Fta1-st8HwIVjXx0zFfM?usp=sharing)  
    - Files: `config.json`, `model.safetensors`, `sentencepiece.bpe.model`, `special_tokens_map.json`, `tokenizer_config.json`, `tokenizer.json`.
    - Move them to `server/model/` directory:
      ```bash
