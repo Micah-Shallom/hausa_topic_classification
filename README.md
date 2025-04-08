@@ -12,7 +12,7 @@ A topic classification system for Hausa news using AfroXLMR-base, achieving a te
 
 ## Features
 - Classifies Hausa news into 7 topics: Business, Entertainment, Health, Politics, Religion, Sport, Technology.
-- Focal loss (α=0.6, γ=2.0), temperature scaling (T=1.5), and threshold (0.6) for "Other" category.
+- Focal loss (α=0.25, γ=1.0), temperature scaling (T=1.5), and threshold (0.6) for "Other" category.
 - Real-time inference via API and interactive UI.
 
 ## Prerequisites
