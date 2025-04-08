@@ -6,6 +6,10 @@ A topic classification system for Hausa news using AfroXLMR-base, achieving a te
 - **`client/`**: Frontend (e.g., React/Vue with pnpm).
 - **`server/`**: Backend (FastAPI with AfroXLMR-base model).
 
+## Application
+![Screenshot from 2025-04-07 01-56-29](https://github.com/user-attachments/assets/3a14ad71-30ad-465f-ad11-cc31ef1852f7)
+![Screenshot from 2025-04-07 01-58-18](https://github.com/user-attachments/assets/6c5a656c-6a78-4030-b5c2-de5035099ef5)
+
 ## Features
 - Classifies Hausa news into 7 topics: Business, Entertainment, Health, Politics, Religion, Sport, Technology.
 - Focal loss (α=0.6, γ=2.0), temperature scaling (T=1.5), and threshold (0.6) for "Other" category.
@@ -94,5 +98,6 @@ A topic classification system for Hausa news using AfroXLMR-base, achieving a te
 - **Model**: AfroXLMR-base by Davlan (Hugging Face).
 - **Dataset**: MasakhaNEWS (Masakhane).
 - **Course**: COEN541 - Natural Language Processing.
+
 
 
