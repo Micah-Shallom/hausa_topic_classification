@@ -18,7 +18,7 @@ A topic classification system for Hausa news using AfroXLMR-base, achieving a te
 ## Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Micah-Shallom/hausa-topic-classifier.git
+   git clone https://github.com/Micah-Shallom/hausa-topic-classification.git
    cd hausa-topic-classifier
    ```
 
